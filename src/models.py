@@ -45,7 +45,8 @@ class AgglomerativeWrapper(ClusteringStrategy):
 class HDBSCANWrapper(ClusteringStrategy):
     def __init__(self, min_samples=5, min_cluster_size=5):
         # HDBSCAN is density-based; it finds cluster numbers automatically.
-        self.model = HDBSCAN(min_samples=min_samples, min_cluster_size=min_cluster_size)
+        # copy=True is added to comply with scikit-learn 1.10+ standards.
+        self.model = HDBSCAN(min_samples=min_samples, min_cluster_size=min_cluster_size, copy=True)
         self._name = "HDBSCAN"
 
     def fit_predict(self, X):
