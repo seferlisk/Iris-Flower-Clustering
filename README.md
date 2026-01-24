@@ -45,6 +45,7 @@ The script will:
      - HDBSCAN: A density-based algorithm that extends DBSCAN. It is robust to noise and can identify clusters of varying densities. It may assign outlier points a label of -1.
 3. **Evaluation Metrics**
     We use intrinsic metrics since we are treating this as an unsupervised problem:
+     - **Elbow Method (Inertia/WCSS):** Measures the sum of squared distances of samples to their closest cluster center. We look for the "elbow" where the rate of decrease sharply slows down to find the optimal $k$.
      - **Silhouette Score**: Measures how similar an object is to its own cluster compared to other clusters. Range: $[-1, 1]$. Higher is better.
 
 ## Visualization
