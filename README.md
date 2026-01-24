@@ -46,7 +46,6 @@ The script will:
 3. **Evaluation Metrics**
     We use intrinsic metrics since we are treating this as an unsupervised problem:
      - **Silhouette Score**: Measures how similar an object is to its own cluster compared to other clusters. Range: $[-1, 1]$. Higher is better.
-     - **Davies-Bouldin Index**: Measures the average similarity ratio of each cluster with its most similar cluster. Lower is better.
 
 ## Visualization
 Since the dataset has 4 dimensions, we use Principal Component Analysis (PCA) to reduce the data to 2 dimensions for visualization purposes. This allows us to plot the resulting clusters on a 2D scatter plot.
